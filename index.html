@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerold - Video Editor Portfolio</title>
+    
+    <!-- Fonts -->
+    <style>
+        @font-face {
+            font-family: 'AstaSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Light.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'AstaSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'AstaSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'AstaSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'AstaSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'AstaSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-display: swap;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="url(#gradient)" stroke-width="4"/>
+                    <path d="M15 20L18 23L25 16" stroke="url(#gradient)" stroke-width="3" fill="none"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B5CF6"/>
+                            <stop offset="100%" style="stop-color:#06B6D4"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolios</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-social">
+                <a href="#" class="social-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1a11 11 0 1011 11A11 11 0 0012 1zm5 8.5a6.5 6.5 0 11-6.5-6.5 6.5 6.5 0 016.5 6.5z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                    </svg>
+                </a>
+            </div>
+            <button class="lets-talk-btn">
+                Let's Talk
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hello">HELLO</span>
+                    <div class="video-badge">
+                        <div class="badge-circle">
+                            <div class="play-button">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="badge-text">
+                            <span>EXPERT VIDEO EDITOR</span>
+                            <span>EXPERT VIDEO EDITOR</span>
+                        </div>
+                    </div>
+                    <span class="motion">MOTION</span>
+                </h1>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/hero/hero-9-thumb.png" alt="Video Editor" class="hero-img">
+                <div class="tooltip">
+                    <div class="tooltip-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="#8B5CF6"/>
+                        </svg>
+                    </div>
+                    <div class="tooltip-content">
+                        <h4>Awarded Creative<br>Video Editor.</h4>
+                    </div>
+                </div>
+                <div class="name-tag">Gerold</div>
+            </div>
+            
+            <div class="hero-description">
+                <p>My role as a amplify tha story through my careful <strong>[Video Editor]</strong> selection of footages, pacing, and visual style. My keen attention to detail allows me to enhance the mood.</p>
+                
+                <div class="experience-stats">
+                    <div class="stat">
+                        <h2>12+</h2>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="clients-text">
+                        <p>100+ Trusted Clients Over the world</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Logos Section -->
+    <section class="brands">
+        <div class="brands-marquee">
+            <div class="brands-track">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-1.png" alt="Brand 1">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-2.png" alt="Brand 2">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-3.png" alt="Brand 3">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-4.png" alt="Brand 4">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-5.png" alt="Brand 5">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-6.png" alt="Brand 6">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-7.png" alt="Brand 7">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-8.png" alt="Brand 8">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-1.png" alt="Brand 1">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-2.png" alt="Brand 2">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-3.png" alt="Brand 3">
+                <img src="https://themejunction.net/html/gerold/demo/assets/img/brand/brand-dark-4.png" alt="Brand 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="skills-header">
+                <p class="section-subtitle">My Recent Work</p>
+                <h2 class="section-title">MY Mastering Video Editing Skills</h2>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="https://themejunction.net/html/gerold/demo/assets/img/icons/progess-9-icon1.svg" alt="After Effects">
+                    </div>
+                    <div class="skill-content">
+                        <h4>Adobe After<br>Effect</h4>
+                        <p>Adobe After Effects is a powerful software application used motion graphics.</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-progress="95"></div>
+                        </div>
+                        <span class="progress-text">95%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="https://themejunction.net/html/gerold/demo/assets/img/icons/progess-9-icon2.svg" alt="Final Cut Pro">
+                    </div>
+                    <div class="skill-content">
+                        <h4>Final Cut<br>Pro</h4>
+                        <p>Professional video editing software developed by Apple Inc., designed.</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-progress="90"></div>
+                        </div>
+                        <span class="progress-text">90%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="https://themejunction.net/html/gerold/demo/assets/img/icons/progess-9-icon3.svg" alt="iMovie">
+                    </div>
+                    <div class="skill-content">
+                        <h4>iMovie<br>Film</h4>
+                        <p>iMovie offers a range of powerful editing tools that allow users.</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-progress="85"></div>
+                        </div>
+                        <span class="progress-text">85%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="https://themejunction.net/html/gerold/demo/assets/img/icons/progess-9-icon4.svg" alt="HitFilm Express">
+                    </div>
+                    <div class="skill-content">
+                        <h4>Hit Films<br>Express</h4>
+                        <p>HitFilm Express is a free video editing and visual effects software developed.</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-progress="88"></div>
+                        </div>
+                        <span class="progress-text">88%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://themejunction.net/html/gerold/demo/assets/img/about/about-9-thumb.jpg" alt="About">
+                </div>
+                
+                <div class="about-text">
+                    <p class="section-subtitle">Behind the Pixels</p>
+                    <h2 class="section-title">Passionate On Digital Marketer Focused on Driving Results.</h2>
+                    <p class="about-description">This art form combines creativity, technical skills, and an understanding of storytelling to produce engaging content for various platforms, including film./</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-count="80">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <p>Years of<br>Experiences</p>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-count="80">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <p>Project<br>Completed</p>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-count="80">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <p>Successful<br>Project</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <p class="section-subtitle">my services</p>
+                <h2 class="section-title">Here's how I can help!</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="https://themejunction.net/html/gerold/demo/assets/img/icons/service-6-icon1.svg" alt="Corporate Video">
+                    </div>
+                    <h4><a href="#">Corporate Video</a></h4>
+                    <p>This can include promotional ads videos, training materials, product demos, and internal communications. Editors work with raw footage compelling.</p>
+                    <ul>
+                        <li>Promotional</li>
+                        <li>Training</li>
+                        <li>Communication</li>
+                    </ul>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="https://themejunction.net/html/gerold/demo/assets/img/icons/service-6-icon2.svg" alt="Media Video">
+                    </div>
+                    <h4><a href="#">Media Video</a></h4>
+                    <p>Social media video editing services specialize in creating engaging video content tailored for platforms like Instagram, Facebook.</p>
+                    <ul>
+                        <li>Promotional</li>
+                        <li>Educational</li>
+                        <li>Storytelling</li>
+                    </ul>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <img src="https://themejunction.net/html/gerold/demo/assets/img/icons/service-6-icon3.svg" alt="Event Video">
+                    </div>
+                    <h4><a href="#">Event Video</a></h4>
+                    <p>Event video editing services capture and transform footage from weddings, corporate events, parties, and other gatherings into memorable</p>
+                    <ul>
+                        <li>Live Streamed</li>
+                        <li>Founder's Stories</li>
+                        <li>Promotional</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <a href="#contact" class="contact-btn">Let's Contact with Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <p class="section-subtitle">My Recent Work</p>
+                <h2 class="section-title">Recent work for<br>MY clients</h2>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://themejunction.net/html/gerold/demo/assets/img/project/project-9-thumb2.jpg" alt="Deloitte Project">
+                    <div class="portfolio-content">
+                        <h4>Deloitte</h4>
+                        <p>Project was about precision and information.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://themejunction.net/html/gerold/demo/assets/img/project/project-9-thumb3.jpg" alt="Sebastian Project">
+                    <div class="portfolio-content">
+                        <h4>Sebastian</h4>
+                        <p>Project was about precision and information.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://themejunction.net/html/gerold/demo/assets/img/project/project-9-thumb1.jpg" alt="New Age Project">
+                    <div class="portfolio-content">
+                        <h4>New Age</h4>
+                        <p>Project was about precision and information.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://themejunction.net/html/gerold/demo/assets/img/project/project-9-thumb1.jpg" alt="Quillow Project">
+                    <div class="portfolio-content">
+                        <h4>Quillow</h4>
+                        <p>Project was about precision and information.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://themejunction.net/html/gerold/demo/assets/img/project/project-9-thumb2.jpg" alt="Deloitte Project">
+                    <div class="portfolio-content">
+                        <h4>Deloitte</h4>
+                        <p>Project was about precision and information.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://themejunction.net/html/gerold/demo/assets/img/project/project-9-thumb3.jpg" alt="Sebastian Project">
+                    <div class="portfolio-content">
+                        <h4>Sebastian</h4>
+                        <p>Project was about precision and information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
