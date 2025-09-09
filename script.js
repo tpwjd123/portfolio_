@@ -217,46 +217,19 @@ function initSmoothScroll() {
     });
 }
 
-// TJ 마퀴 슬라이더 개선
+// 브랜드 마퀴 애니메이션 개선
 function enhanceBrandMarquee() {
-    const marqueeSliders = document.querySelectorAll('.tj-maquee-slider-one, .tj-maquee-slider-two, .tj-maquee-slider-three');
-    
-    marqueeSliders.forEach(slider => {
-        const marqueeWrap = slider.querySelector('.marquee-wrap');
-        const brandImages = slider.querySelectorAll('img');
+    const track = document.querySelector('.brands-track');
+    if (track) {
+        // 마우스 호버 시 일시정지
+        track.addEventListener('mouseenter', () => {
+            track.style.animationPlayState = 'paused';
+        });
         
-        if (marqueeWrap) {
-            // 마우스 호버 시 일시정지
-            slider.addEventListener('mouseenter', () => {
-                marqueeWrap.style.animationPlayState = 'paused';
-            });
-            
-            slider.addEventListener('mouseleave', () => {
-                marqueeWrap.style.animationPlayState = 'running';
-            });
-            
-            // 개별 브랜드 이미지 호버 효과
-            brandImages.forEach(img => {
-                img.addEventListener('mouseenter', () => {
-                    gsap.to(img, {
-                        duration: 0.3,
-                        y: -5,
-                        scale: 1.05,
-                        ease: 'power2.out'
-                    });
-                });
-                
-                img.addEventListener('mouseleave', () => {
-                    gsap.to(img, {
-                        duration: 0.3,
-                        y: 0,
-                        scale: 1,
-                        ease: 'power2.out'
-                    });
-                });
-            });
-        }
-    });
+        track.addEventListener('mouseleave', () => {
+            track.style.animationPlayState = 'running';
+        });
+    }
 }
 
 // 패럴랙스 효과
