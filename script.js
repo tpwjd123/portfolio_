@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initProgressBars();
     initCounters();
     initSmoothScroll();
+    initPortfolioSwiper();
 });
 
 // GSAP 초기 애니메이션 설정
@@ -410,3 +411,111 @@ const optimizedScroll = debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', optimizedScroll);
+
+// 포트폴리오 스와이퍼 초기화
+function initPortfolioSwiper() {
+    const portfolioSwiper = new Swiper('.portfolio-swiper', {
+        // 기본 설정
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        
+        // 네비게이션
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        
+        // 페이지네이션
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        
+        // 반응형 브레이크포인트
+        breakpoints: {
+            // 480px 이상
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            // 768px 이상
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            // 1024px 이상
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+        
+        // 효과
+        effect: 'slide',
+        speed: 600,
+        
+        // 터치 설정
+        touchRatio: 1,
+        touchAngle: 45,
+        grabCursor: true,
+        
+        // 접근성
+        a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide',
+        },
+        
+        // 키보드 컨트롤
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        
+        // 마우스휠 컨트롤
+        mousewheel: {
+            invert: false,
+        },
+        
+        // 이벤트 콜백
+        on: {
+            init: function () {
+                // 스와이퍼 초기화 완료 후 애니메이션
+                gsap.from('.portfolio-swiper .swiper-slide', {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    stagger: 0.1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.portfolio-swiper',
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                });
+            },
+            slideChange: function () {
+                // 슬라이드 변경 시 애니메이션
+                const activeSlide = this.slides[this.activeIndex];
+                if (activeSlide) {
+                    gsap.from(activeSlide.querySelector('.portfolio-item'), {
+                        duration: 0.6,
+                        scale: 0.9,
+                        opacity: 0.8,
+                        ease: 'power2.out'
+                    });
+                }
+            }
+        }
+    });
+    
+    // 스와이퍼 인스턴스를 전역에서 접근 가능하도록 저장
+    window.portfolioSwiper = portfolioSwiper;
+    
+    return portfolioSwiper;
+}
