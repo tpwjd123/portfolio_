@@ -416,8 +416,8 @@ window.addEventListener('scroll', optimizedScroll);
 function initPortfolioSwiper() {
     const portfolioSwiper = new Swiper('.portfolio-swiper', {
         // 기본 설정
-        slidesPerView: 3,
-        spaceBetween: 40,
+        slidesPerView: 1,
+        spaceBetween: 30,
         loop: true,
         autoplay: {
             delay: 4000,
@@ -452,7 +452,7 @@ function initPortfolioSwiper() {
             // 1024px 이상
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 30,
             },
         },
         

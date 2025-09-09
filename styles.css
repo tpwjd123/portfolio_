@@ -737,8 +737,8 @@ body {
 
 /* Portfolio Section */
 .portfolio {
-    padding: 120px 0;
-    background: white;
+    padding: 100px 0;
+    background: #f8f9fa;
 }
 
 .portfolio-header {
@@ -748,9 +748,9 @@ body {
 
 .portfolio-swiper-container {
     position: relative;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 60px;
 }
 
 .portfolio-swiper {
@@ -762,12 +762,10 @@ body {
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
 }
 
 .portfolio-item:hover {
@@ -777,10 +775,9 @@ body {
 
 .portfolio-item img {
     width: 100%;
-    height: 280px;
+    height: 250px;
     object-fit: cover;
     transition: transform 0.3s ease;
-    flex-shrink: 0;
 }
 
 .portfolio-item:hover img {
@@ -788,48 +785,39 @@ body {
 }
 
 .portfolio-content {
-    padding: 35px 30px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 30px;
 }
 
 .portfolio-content h4 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: #333;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 .portfolio-content p {
     color: #666;
-    line-height: 1.7;
-    font-size: 16px;
-    margin: 0;
+    line-height: 1.6;
 }
 
 /* Swiper Navigation */
 .portfolio-swiper .swiper-button-next,
 .portfolio-swiper .swiper-button-prev {
     position: absolute;
-    top: 20px;
-    transform: none;
+    top: 50%;
+    transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background: white;
-    border: 2px solid #f0f0f0;
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
     border-radius: 50%;
-    color: #333;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 10;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
 }
 
 .portfolio-swiper .swiper-button-next:after,
@@ -838,20 +826,17 @@ body {
 }
 
 .portfolio-swiper .swiper-button-next {
-    right: 80px;
+    right: 10px;
 }
 
 .portfolio-swiper .swiper-button-prev {
-    right: 140px;
+    left: 10px;
 }
 
 .portfolio-swiper .swiper-button-next:hover,
 .portfolio-swiper .swiper-button-prev:hover {
-    background: #8B5CF6;
-    color: white;
-    border-color: #8B5CF6;
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
 }
 
 .portfolio-swiper .swiper-button-disabled {
