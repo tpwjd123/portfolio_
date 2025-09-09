@@ -815,20 +815,21 @@ body {
 .portfolio-swiper .swiper-button-next,
 .portfolio-swiper .swiper-button-prev {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20px;
+    transform: none;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+    background: white;
+    border: 2px solid #f0f0f0;
     border-radius: 50%;
-    color: white;
+    color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 10;
     cursor: pointer;
-    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-swiper .swiper-button-next:after,
@@ -837,17 +838,20 @@ body {
 }
 
 .portfolio-swiper .swiper-button-next {
-    right: 10px;
+    right: 80px;
 }
 
 .portfolio-swiper .swiper-button-prev {
-    left: 10px;
+    right: 140px;
 }
 
 .portfolio-swiper .swiper-button-next:hover,
 .portfolio-swiper .swiper-button-prev:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+    background: #8B5CF6;
+    color: white;
+    border-color: #8B5CF6;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
 }
 
 .portfolio-swiper .swiper-button-disabled {
