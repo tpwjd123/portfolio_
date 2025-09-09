@@ -39,7 +39,7 @@ function initAnimations() {
         }, '-=0.5')
         .from('.motion', {
             duration: 1.2,
-            x: 100,
+            y: 100,
             opacity: 0,
             ease: 'power3.out'
         }, '-=0.8');
