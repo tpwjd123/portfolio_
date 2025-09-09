@@ -1,5 +1,8 @@
 // GSAP 애니메이션 및 JavaScript 기능
 
+// GSAP 플러그인 등록
+gsap.registerPlugin(ScrollTrigger);
+
 // 페이지 로드 시 초기화
 document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
