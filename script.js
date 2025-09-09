@@ -217,19 +217,46 @@ function initSmoothScroll() {
     });
 }
 
-// 브랜드 마퀴 애니메이션 개선
+// 브랜드 마퀴 슬라이더 개선
 function enhanceBrandMarquee() {
-    const track = document.querySelector('.brands-track');
-    if (track) {
-        // 마우스 호버 시 일시정지
-        track.addEventListener('mouseenter', () => {
-            track.style.animationPlayState = 'paused';
-        });
+    const marqueeSliders = document.querySelectorAll('.tj-maquee-slider-one, .tj-maquee-slider-two');
+    
+    marqueeSliders.forEach(slider => {
+        const track = slider.querySelector('.marquee-track');
         
-        track.addEventListener('mouseleave', () => {
-            track.style.animationPlayState = 'running';
-        });
-    }
+        if (track) {
+            // 마우스 호버 시 일시정지
+            slider.addEventListener('mouseenter', () => {
+                track.style.animationPlayState = 'paused';
+            });
+            
+            slider.addEventListener('mouseleave', () => {
+                track.style.animationPlayState = 'running';
+            });
+            
+            // 브랜드 아이템 호버 효과
+            const brandItems = slider.querySelectorAll('.brand-item');
+            brandItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    gsap.to(item, {
+                        duration: 0.3,
+                        y: -8,
+                        scale: 1.05,
+                        ease: 'power2.out'
+                    });
+                });
+                
+                item.addEventListener('mouseleave', () => {
+                    gsap.to(item, {
+                        duration: 0.3,
+                        y: 0,
+                        scale: 1,
+                        ease: 'power2.out'
+                    });
+                });
+            });
+        }
+    });
 }
 
 // 패럴랙스 효과

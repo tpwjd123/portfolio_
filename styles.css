@@ -19,6 +19,12 @@ body {
     padding: 0 20px;
 }
 
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 /* Grid System */
 .row {
     display: flex;
@@ -383,30 +389,99 @@ body {
     overflow: hidden;
 }
 
-.brands-marquee {
+/* Marquee Slider One */
+.tj-maquee-slider-one {
+    margin-bottom: 30px;
     overflow: hidden;
 }
 
-.brands-track {
-    display: flex;
-    animation: marquee 30s linear infinite;
-    gap: 60px;
+.tj-maquee-slider-one .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.brands-track img {
-    height: 40px;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
+.tj-maquee-slider-one .marquee-track {
+    display: inline-flex;
+    gap: 80px;
+    animation: marqueeLeft 40s linear infinite;
+    will-change: transform;
+}
+
+/* Marquee Slider Two */
+.tj-maquee-slider-two {
+    overflow: hidden;
+}
+
+.tj-maquee-slider-two .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tj-maquee-slider-two .marquee-track {
+    display: inline-flex;
+    gap: 80px;
+    animation: marqueeRight 35s linear infinite;
+    will-change: transform;
+}
+
+/* Brand Items */
+.brand-item {
     flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
-.brands-track img:hover {
+.brand-item:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.brand-item img {
+    height: 50px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.brand-item:hover img {
     opacity: 1;
+    filter: grayscale(0%);
 }
 
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+/* Marquee Animations */
+@keyframes marqueeLeft {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); 
+    }
+}
+
+@keyframes marqueeRight {
+    0% { 
+        transform: translateX(-50%); 
+    }
+    100% { 
+        transform: translateX(0); 
+    }
+}
+
+/* Pause animation on hover */
+.tj-maquee-slider-one:hover .marquee-track,
+.tj-maquee-slider-two:hover .marquee-track {
+    animation-play-state: paused;
 }
 
 @keyframes rotate {
