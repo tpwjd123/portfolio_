@@ -651,10 +651,16 @@ body {
     margin-bottom: 80px;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+.portfolio-swiper-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.portfolio-swiper {
+    overflow: hidden;
+    padding-bottom: 50px;
 }
 
 .portfolio-item {
@@ -664,6 +670,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    height: 100%;
 }
 
 .portfolio-item:hover {
@@ -696,6 +703,76 @@ body {
 .portfolio-content p {
     color: #666;
     line-height: 1.6;
+}
+
+/* Swiper Navigation */
+.portfolio-swiper .swiper-button-next,
+.portfolio-swiper .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+}
+
+.portfolio-swiper .swiper-button-next:after,
+.portfolio-swiper .swiper-button-prev:after {
+    display: none;
+}
+
+.portfolio-swiper .swiper-button-next {
+    right: 10px;
+}
+
+.portfolio-swiper .swiper-button-prev {
+    left: 10px;
+}
+
+.portfolio-swiper .swiper-button-next:hover,
+.portfolio-swiper .swiper-button-prev:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+}
+
+.portfolio-swiper .swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Swiper Pagination */
+.portfolio-swiper .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.portfolio-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(139, 92, 246, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.portfolio-swiper .swiper-pagination-bullet-active {
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+    transform: scale(1.2);
 }
 
 /* Responsive Design */
@@ -737,9 +814,12 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .services-grid,
-    .portfolio-grid {
+    .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .portfolio-swiper-container {
+        padding: 0 40px;
     }
     
     .skills-grid {
@@ -763,6 +843,17 @@ body {
     .skill-item,
     .service-item {
         padding: 30px 20px;
+    }
+    
+    .portfolio-swiper-container {
+        padding: 0 20px;
+    }
+    
+    .portfolio-swiper .swiper-button-next,
+    .portfolio-swiper .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        display: none;
     }
 }
 
