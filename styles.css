@@ -1027,3 +1027,242 @@ html {
 .header {
     cache-control: no-cache;
 }
+
+/* Background & Achievements Section */
+.background-achievements {
+    padding: 100px 0;
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Keywords Marquee */
+.keywords-marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.keywords-marquee .marquee-track {
+    display: flex;
+    gap: 60px;
+    animation: marqueeKeywords 30s linear infinite;
+    white-space: nowrap;
+}
+
+.keywords-marquee span {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+@keyframes marqueeKeywords {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Achievements Content */
+.achievements-content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.achievements-content .section-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 60px;
+    background: white;
+    border-radius: 40px;
+    padding: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+    color: white;
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+}
+
+.tab-btn:hover {
+    color: #8B5CF6;
+}
+
+.tab-btn.active:hover {
+    color: white;
+}
+
+/* Achievements List */
+.achievements-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Achievement Icon */
+.achievement-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.achievement-icon.orange {
+    background: linear-gradient(135deg, #FF8A00, #FF6B00);
+}
+
+.achievement-icon.blue {
+    background: linear-gradient(135deg, #4285F4, #1976D2);
+}
+
+.achievement-icon.red {
+    background: linear-gradient(135deg, #FF4444, #CC0000);
+}
+
+/* Achievement Content */
+.achievement-content {
+    flex: 1;
+    text-align: left;
+}
+
+.achievement-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.achievement-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Achievement Year */
+.achievement-year {
+    margin-left: 30px;
+    flex-shrink: 0;
+}
+
+.achievement-year span {
+    display: inline-block;
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Responsive Design for Achievements */
+@media (max-width: 768px) {
+    .background-achievements {
+        padding: 80px 0;
+    }
+    
+    .achievements-content {
+        margin-top: 80px;
+    }
+    
+    .achievements-content .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .tab-navigation {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .tab-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .achievement-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .achievement-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .achievement-content {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .achievement-year {
+        margin-left: 0;
+    }
+    
+    .keywords-marquee {
+        height: 60px;
+    }
+    
+    .keywords-marquee span {
+        font-size: 12px;
+    }
+}
