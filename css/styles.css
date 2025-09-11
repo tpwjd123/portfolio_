@@ -172,7 +172,6 @@ body {
 /* Hero Layout Rows */
 .hero-top-row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 80px;
     width: 100%;
@@ -279,10 +278,10 @@ body {
 }
 
 .hero-img {
-    width: 350px;
-    height: 420px;
+    width: 550px;
+    height: 680px;
     object-fit: cover;
-    border-radius: 175px 175px 0 0;
+    border-radius: 260px 260px 0 0;
     box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
 }
 
