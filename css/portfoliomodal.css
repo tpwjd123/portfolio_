@@ -1,0 +1,400 @@
+/* Portfolio Section */
+.portfolio {
+    padding: 6rem 0;
+    background: var(--bg-white);
+}
+
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.portfolio-masonry {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.portfolio-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: 400px;
+}
+
+.portfolio-row.reverse {
+    direction: rtl;
+}
+
+.portfolio-row.reverse > * {
+    direction: ltr;
+}
+
+.portfolio-item.large {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item.large:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-mockup {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-mockup::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 320px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 25px;
+    border: 8px solid #333;
+    box-shadow: 0 0 0 2px #666;
+}
+
+.mobile-mockup::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 280px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 280"><rect x="20" y="40" width="110" height="60" rx="8" fill="%23fff" opacity="0.9"/><rect x="20" y="120" width="80" height="12" rx="6" fill="%23fff" opacity="0.7"/><rect x="20" y="140" width="90" height="12" rx="6" fill="%23fff" opacity="0.7"/><circle cx="75" cy="200" r="20" fill="%23fff" opacity="0.8"/></svg>') center/cover;
+    border-radius: 20px;
+}
+
+.desktop-mockup {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-mockup::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 200px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 12px;
+    border: 3px solid #334155;
+}
+
+.desktop-mockup::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 180px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180"><rect x="0" y="0" width="300" height="30" fill="%23334155"/><circle cx="15" cy="15" r="4" fill="%23ef4444"/><circle cx="30" cy="15" r="4" fill="%23f59e0b"/><circle cx="45" cy="15" r="4" fill="%2310b981"/><rect x="20" y="50" width="260" height="100" rx="8" fill="%236366f1" opacity="0.8"/><rect x="40" y="70" width="100" height="12" rx="6" fill="%23fff" opacity="0.9"/><rect x="40" y="90" width="80" height="8" rx="4" fill="%23fff" opacity="0.7"/></svg>') center/cover;
+    border-radius: 8px;
+}
+
+.web-mockup {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.web-mockup::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 200px;
+    background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    border-radius: 15px;
+    border: 2px solid #4b5563;
+}
+
+.web-mockup::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 180px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 180"><rect x="40" y="40" width="180" height="60" rx="8" fill="%236366f1" opacity="0.8"/><rect x="60" y="60" width="60" height="8" rx="4" fill="%23fff" opacity="0.9"/><rect x="60" y="75" width="40" height="6" rx="3" fill="%23fff" opacity="0.7"/><rect x="40" y="120" width="80" height="40" rx="8" fill="%23374151"/><rect x="140" y="120" width="80" height="40" rx="8" fill="%23374151"/></svg>') center/cover;
+    border-radius: 12px;
+}
+
+.portfolio-content-right,
+.portfolio-content-left {
+    padding: 2rem 0;
+}
+
+.portfolio-content-left {
+    text-align: left;
+}
+
+.portfolio-content-right {
+    text-align: left;
+}
+
+.portfolio-number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.portfolio-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    font-family: 'AstaSans', sans-serif;
+}
+
+.portfolio-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+
+.portfolio-arrow {
+    background: none;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.portfolio-arrow:hover {
+    background: var(--primary-purple);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Portfolio Modal */
+.portfolio-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.portfolio-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 1000px;
+    overflow-y: auto;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-purple);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: var(--dark-purple);
+    transform: scale(1.1);
+}
+
+.modal-header {
+    padding: 3rem 3rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.modal-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.modal-subtitle {
+    color: var(--primary-purple);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.modal-body {
+    padding: 2rem 3rem 3rem;
+}
+
+.modal-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.modal-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="15" y="25" width="70" height="45" rx="5" fill="%23fff" opacity="0.8"/><circle cx="50" cy="70" r="8" fill="%23fff" opacity="0.8"/><rect x="25" y="35" width="50" height="3" rx="1.5" fill="%23667eea"/><rect x="25" y="42" width="35" height="2" rx="1" fill="%23667eea" opacity="0.7"/></svg>') center/cover;
+}
+
+.modal-details {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.modal-info {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.info-value {
+    color: var(--text-light);
+}
+
+.modal-description h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.modal-description h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: var(--text-dark);
+}
+
+.modal-description p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.live-preview-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gradient-purple);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.live-preview-btn:hover {
+    transform: translateY(-2px);
+}
+

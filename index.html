@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,8 @@
     <meta property="og:url" content="https://your-portfolio-url.com/">
     <meta property="og:image" content="https://your-portfolio-url.com/attached_assets/screenshot-1757382186394.png">
     <title>김세정 포트폴리오</title>
-    
-    
+
+
     <style>
         @font-face {
             font-family: 'AstaSans';
@@ -58,32 +59,36 @@
         }
     </style>
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
-    
+
+    <!-- css2포폴섹션&모달 -->
+    <link rel="stylesheet" href="./css/portfoliomodal.css">
+
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-    
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="nav-logo">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <circle cx="20" cy="20" r="18" stroke="url(#gradient)" stroke-width="4"/>
-                    <path d="M15 20L18 23L25 16" stroke="url(#gradient)" stroke-width="3" fill="none"/>
+                    <circle cx="20" cy="20" r="18" stroke="url(#gradient)" stroke-width="4" />
+                    <path d="M15 20L18 23L25 16" stroke="url(#gradient)" stroke-width="3" fill="none" />
                     <defs>
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#8B5CF6"/>
-                            <stop offset="100%" style="stop-color:#06B6D4"/>
+                            <stop offset="0%" style="stop-color:#8B5CF6" />
+                            <stop offset="100%" style="stop-color:#06B6D4" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -96,34 +101,10 @@
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-social">
-                <a href="#" class="social-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                    </svg>
-                </a>
-                <a href="#" class="social-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M12 1a11 11 0 1011 11A11 11 0 0012 1zm5 8.5a6.5 6.5 0 11-6.5-6.5 6.5 6.5 0 016.5 6.5z"/>
-                    </svg>
-                </a>
-                <a href="#" class="social-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                        <circle cx="4" cy="4" r="2"/>
-                    </svg>
-                </a>
-                <a href="#" class="social-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-                    </svg>
-                </a>
-            </div>
             <button class="lets-talk-btn">
                 Let's Talk
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                    <path d="M7 17l9.2-9.2M17 17V7H7" />
                 </svg>
             </button>
         </nav>
@@ -133,45 +114,44 @@
     <section class="hero" id="home">
         <div class="container">
             <!-- Top Row: HELLO - CENTER - MOTION -->
-            <div class="hero-top-row">
+            <div class="text">
                 <div class="hello-text">
-                    <h1>HELLO</h1>
+                    <h1>코딩하는</h1>
                 </div>
-                
-                <div class="hero-center">
+                <div class="motion-text">
+                    <h1>김세정입니다.</h21>
+                </div>
+            <div class="hero-top-row">
                     <!-- Rotating Badge -->
                     <div class="rotating-badge">
                         <div class="badge-circle">
                             <div class="play-button">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                                    <path d="M8 5v14l11-7z"/>
+                                    <path d="M8 5v14l11-7z" />
                                 </svg>
                             </div>
                         </div>
-                        <div class="badge-text">
-                            <span>EXPERT VIDEO EDITOR</span>
-                            <span>EXPERT VIDEO EDITOR</span>
-                        </div>
                     </div>
-                    
+                </div>
+
+                <div class="hero-center">
+
                     <!-- Hero Image -->
                     <div class="hero-image">
                         <img src="https://placehold.co/1262x1560" alt="Gerold" class="hero-img">
                     </div>
                 </div>
-                
-                <div class="motion-text">
-                    <h1>I'M</h1>
-                </div>
+
             </div>
-            
+
             <!-- Bottom Row: TOOLTIP - EXPERIENCE -->
             <div class="hero-bottom-row">
                 <div class="awarded-tooltip">
                     <div class="tooltip-badge">
                         <div class="tooltip-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="#8B5CF6"/>
+                                <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"
+                                    fill="#8B5CF6" />
                             </svg>
                         </div>
                         <div class="tooltip-content">
@@ -180,23 +160,37 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="experience-description">
-                    <p>My role as a visionary in the story through the skillful Online Edition landscape of montages, pacing, and visual style. My keen attention to detail allows me to...</p>
-                    
+                    <p>My role as a visionary in the story through the skillful Online Edition landscape of montages,
+                        pacing, and visual style. My keen attention to detail allows me to...</p>
+
                     <div class="experience-counter">
                         <div class="counter-number">12+</div>
                         <div class="counter-text">Years of Experience</div>
                     </div>
-                    
+
                     <div class="arrow-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" />
                         </svg>
                     </div>
                 </div>
             </div>
+            <a class="lets-talk-btn inline"
+                href="https://drive.google.com/file/d/1jYqJkQ0SxWzmHDPbVddNszzLFel3uN3S/view?usp=sharing"
+                target="_blank">이력서보기</a>
+            <a class="lets-talk-btn inline" href="https://github.com/tpwjd123?tab=repositories"
+                target="_blank">깃허브보기</a>
         </div>
+
+        <div class="scroll-indicator">
+            <a href="#clients" class="scroll-link">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow"></div>
+            </a>
+        </div>
+
     </section>
 
     <!-- Brand Logos Section -->
@@ -218,6 +212,71 @@
             </div>
         </div>
     </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://placehold.co/533x600" alt="About">
+                </div>
+
+                <div class="about-text">
+                    <p class="section-title">About Me</p>
+                    <h2 class="section-subtitle">안녕하세요. 끈기와 열정으로 성장하는 김세정입니다. </h2>
+                    <h3>인적사항</h3>
+                    <p>이 름: 김세정</p>
+                    <p>나이 : 1998.02.23</p>
+                    <p>거주지 : 서울시 마포구 연남동</p>
+                    <p>휴대폰 : 010.0000.0000</p>
+                    <p>이메일 : ksjhi123@gmail.com</p>
+                    <h3>학력 및 교육사항</h3>
+                    <h5>16.03-18.02</h5>
+                    <p>장안대학교 호텔경영학</p>
+                    <h5>19.11-19.12</h5>
+                    <p>그래픽기술자격 GTQ포토샵</p>
+                    <h5>19.08-19.10</h5>
+                    <p>컴퓨터활용능력 1급</p>
+                    <h5>25.04-25.10</h5>
+                    <p>챗GPT 생성형 AI를 활용한 반응형 웹콘텐츠(영상제작&코딩)개발기획자 양성</p>
+                    <h3>자격사항</h3>
+                    <p>25.09 웹디자인개발기능사</p>
+                    <p>17.05 POWER POINT</p>
+                    <p>17.08 커피바리스타</p>
+
+
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-count="80">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <p>끈기</p>
+                        </div>
+
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-count="80">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <p>열정</p>
+                        </div>
+
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-count="80">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <p>노력</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
@@ -227,7 +286,7 @@
                 <h2 class="section-title">MY Mastering Video Editing Skills</h2>
                 <a href="#" class="learn-more-btn">Learn More</a>
             </div>
-            
+
             <div class="skills-grid">
                 <div class="skill-item">
                     <div class="skill-icon">
@@ -242,7 +301,7 @@
                         <span class="progress-text">95%</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-item">
                     <div class="skill-icon">
                         <img src="https://placehold.co/80x80" alt="Final Cut Pro">
@@ -256,7 +315,7 @@
                         <span class="progress-text">90%</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-item">
                     <div class="skill-icon">
                         <img src="https://placehold.co/80x80" alt="iMovie">
@@ -270,7 +329,7 @@
                         <span class="progress-text">85%</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-item">
                     <div class="skill-icon">
                         <img src="https://placehold.co/80x80" alt="HitFilm Express">
@@ -288,50 +347,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://placehold.co/533x600" alt="About">
-                </div>
-                
-                <div class="about-text">
-                    <p class="section-subtitle">Behind the Pixels</p>
-                    <h2 class="section-title">Passionate On Digital Marketer Focused on Driving Results.</h2>
-                    <p class="about-description">This art form combines creativity, technical skills, and an understanding of storytelling to produce engaging content for various platforms, including film./</p>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">
-                                <span class="counter" data-count="80">0</span>
-                                <span class="plus">+</span>
-                            </div>
-                            <p>Years of<br>Experiences</p>
-                        </div>
-                        
-                        <div class="stat-item">
-                            <div class="stat-number">
-                                <span class="counter" data-count="80">0</span>
-                                <span class="plus">+</span>
-                            </div>
-                            <p>Project<br>Completed</p>
-                        </div>
-                        
-                        <div class="stat-item">
-                            <div class="stat-number">
-                                <span class="counter" data-count="80">0</span>
-                                <span class="plus">+</span>
-                            </div>
-                            <p>Successful<br>Project</p>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="learn-more-btn">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -340,40 +355,43 @@
                 <p class="section-subtitle">my services</p>
                 <h2 class="section-title">Here's how I can help!</h2>
             </div>
-            
+
             <div class="services-grid">
                 <div class="service-item">
                     <div class="service-icon">
                         <img src="https://placehold.co/81.6x81.6" alt="아이콘">
                     </div>
                     <h4><a href="#">Corporate Video</a></h4>
-                    <p>This can include promotional ads videos, training materials, product demos, and internal communications. Editors work with raw footage compelling.</p>
+                    <p>This can include promotional ads videos, training materials, product demos, and internal
+                        communications. Editors work with raw footage compelling.</p>
                     <ul>
                         <li>Promotional</li>
                         <li>Training</li>
                         <li>Communication</li>
                     </ul>
                 </div>
-                
+
                 <div class="service-item">
                     <div class="service-icon">
                         <img src="https://placehold.co/81.6x81.6" alt="아이콘">
                     </div>
                     <h4><a href="#">Media Video</a></h4>
-                    <p>Social media video editing services specialize in creating engaging video content tailored for platforms like Instagram, Facebook.</p>
+                    <p>Social media video editing services specialize in creating engaging video content tailored for
+                        platforms like Instagram, Facebook.</p>
                     <ul>
                         <li>Promotional</li>
                         <li>Educational</li>
                         <li>Storytelling</li>
                     </ul>
                 </div>
-                
+
                 <div class="service-item">
                     <div class="service-icon">
                         <img src="https://placehold.co/81.6x81.6" alt="아이콘">
                     </div>
                     <h4><a href="#">Event Video</a></h4>
-                    <p>Event video editing services capture and transform footage from weddings, corporate events, parties, and other gatherings into memorable</p>
+                    <p>Event video editing services capture and transform footage from weddings, corporate events,
+                        parties, and other gatherings into memorable</p>
                     <ul>
                         <li>Live Streamed</li>
                         <li>Founder's Stories</li>
@@ -381,7 +399,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="services-cta">
                 <a href="#contact" class="contact-btn">Let's Contact with Me</a>
             </div>
@@ -390,115 +408,116 @@
 
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
-        <div class="container">
+        <div class="portfolio-container">
             <div class="portfolio-header">
-                <p class="section-subtitle">My Recent Work</p>
-                <h2 class="section-title">Recent work for<br>MY clients</h2>
+                <span class="section-label">Behind the Pixels</span>
+                <h2 class="section-title">Recent work for MY clients</h2>
             </div>
-            
-            <!-- Swiper -->
-            <div class="portfolio-swiper-container">
-                <div class="swiper portfolio-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="portfolio-item">
-                                <img src="https://placehold.co/540x400" alt="Deloitte Project">
-                                <div class="portfolio-content">
-                                    <h4>Deloitte</h4>
-                                    <p>Project was about precision and information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <div class="portfolio-item">
-                                <img src="https://placehold.co/536x400" alt="Sebastian Project">
-                                <div class="portfolio-content">
-                                    <h4>Sebastian</h4>
-                                    <p>Project was about precision and information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <div class="portfolio-item">
-                                <img src="https://placehold.co/540x400" alt="New Age Project">
-                                <div class="portfolio-content">
-                                    <h4>New Age</h4>
-                                    <p>Project was about precision and information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <div class="portfolio-item">
-                                <img src="https://placehold.co/540x400" alt="Quillow Project">
-                                <div class="portfolio-content">
-                                    <h4>Quillow</h4>
-                                    <p>Project was about precision and information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <div class="portfolio-item">
-                                <img src="https://placehold.co/540x400" alt="Deloitte Project">
-                                <div class="portfolio-content">
-                                    <h4>Deloitte</h4>
-                                    <p>Project was about precision and information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <div class="portfolio-item">
-                                <img src="https://placehold.co/536x400" alt="Sebastian Project">
-                                <div class="portfolio-content">
-                                    <h4>Sebastian</h4>
-                                    <p>Project was about precision and information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <div class="portfolio-item">
-                                <img src="https://placehold.co/536x400" alt="New Age Project">
-                                <div class="portfolio-content">
-                                    <h4>New Age</h4>
-                                    <p>Project was about precision and information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="swiper-slide">
-                            <div class="portfolio-item">
-                                <img src="https://placehold.co/540x400" alt="Quillow Project">
-                                <div class="portfolio-content">
-                                    <h4>Quillow</h4>
-                                    <p>Project was about precision and information.</p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="portfolio-masonry">
+                <!-- First Row - Large item on left -->
+                <div class="portfolio-row">
+                    <div class="portfolio-item large" data-portfolio="dstudio">
+                        <div class="portfolio-image mobile-mockup"></div>
                     </div>
-                    
-                    <!-- Navigation buttons -->
-                    <div class="swiper-button-next">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 18l6-6-6-6"/>
-                        </svg>
+                    <div class="portfolio-content-right">
+                        <span class="portfolio-number">01.</span>
+                        <h3 class="portfolio-title">QUILLOW</h3>
+                        <p class="portfolio-description">
+                            I break down complex user experience problems the create integrity focused to solutions
+                            that's connect.
+                        </p>
+                        <button class="portfolio-arrow">→</button>
                     </div>
-                    <div class="swiper-button-prev">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M15 18l-6-6 6-6"/>
-                        </svg>
+                </div>
+
+                <!-- Second Row - Content left, image right -->
+                <div class="portfolio-row reverse">
+                    <div class="portfolio-content-left">
+                        <span class="portfolio-number">02.</span>
+                        <h3 class="portfolio-title">QUILLOW</h3>
+                        <p class="portfolio-description">
+                            I break down complex user experience problems the create integrity focused to solutions
+                            that's connect.
+                        </p>
+                        <button class="portfolio-arrow">→</button>
                     </div>
-                    
-                    <!-- Pagination -->
-                    <div class="swiper-pagination"></div>
+                    <div class="portfolio-item large" data-portfolio="quillow">
+                        <div class="portfolio-image desktop-mockup"></div>
+                    </div>
+                </div>
+
+                <!-- Third Row - Large item on left -->
+                <div class="portfolio-row">
+                    <div class="portfolio-item large" data-portfolio="creative">
+                        <div class="portfolio-image web-mockup"></div>
+                    </div>
+                    <div class="portfolio-content-right">
+                        <span class="portfolio-number">03.</span>
+                        <h3 class="portfolio-title">QUILLOW</h3>
+                        <p class="portfolio-description">
+                            I break down complex user experience problems the create integrity focused to solutions
+                            that's connect.
+                        </p>
+                        <button class="portfolio-arrow">→</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Portfolio Modal -->
+    <div class="portfolio-modal" id="portfolioModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-header">
+                <h2 class="modal-title">DStudio</h2>
+                <p class="modal-subtitle">Web Design Project</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image"></div>
+                <div class="modal-details">
+                    <div class="modal-info">
+                        <div class="info-item">
+                            <span class="info-label">Category</span>
+                            <span class="info-value">Web Design</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Client</span>
+                            <span class="info-value">Artboard Studio</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Start Date</span>
+                            <span class="info-value">August 20, 2023</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Designer</span>
+                            <span class="info-value">ThemeJunction</span>
+                        </div>
+                    </div>
+                    <div class="modal-description">
+                        <h3>Project Description</h3>
+                        <p>They are was greater open above shelter lets itself under appear sixth open gathering made
+                            upon can't own above midst gathering gathered he one us saying can't divide.</p>
+                        <p>The goal is there are many variations of passages of Lorem Ipsum available, but the majority
+                            have suffered alteration in some form, by injected humour, or randomised words which don't
+                            look even slightly believable.</p>
+
+                        <h4>The Story</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour, or randomised words which don't look
+                            even slightly believable.</p>
+
+                        <h4>Our Approach</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form.</p>
+                    </div>
+                    <a href="#" class="live-preview-btn">Live Preview</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Background & Achievements Section -->
     <section class="background-achievements">
@@ -529,7 +548,7 @@
                     <span class="star">✦</span>
                 </div>
             </div>
-            
+
             <!-- Second Diagonal Banner -->
             <div class="diagonal-banner bottom-banner">
                 <div class="banner-track" data-direction="right">
@@ -554,65 +573,69 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="achievements-content">
                 <h2 class="section-title">MY BACKGROUND AND<br>ACHIEVEMENTS</h2>
-                
+
                 <!-- Tab Navigation -->
                 <div class="tab-navigation">
                     <button class="tab-btn active" data-tab="experience">Experience</button>
                     <button class="tab-btn" data-tab="education">Education</button>
                     <button class="tab-btn" data-tab="awards">Awards</button>
                 </div>
-                
+
                 <!-- Achievement Items -->
                 <div class="achievements-list">
                     <div class="achievement-item">
                         <div class="achievement-icon orange">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                                <path d="M12 2L3 7L12 12L21 7L12 2Z"/>
-                                <path d="M3 17L12 22L21 17"/>
-                                <path d="M3 12L12 17L21 12"/>
+                                <path d="M12 2L3 7L12 12L21 7L12 2Z" />
+                                <path d="M3 17L12 22L21 17" />
+                                <path d="M3 12L12 17L21 12" />
                             </svg>
                         </div>
                         <div class="achievement-content">
                             <h4>SENIOR PRODUCT DESIGNER</h4>
-                            <p>I'm convey of the world's most prestigious web designed that focus on daily informed awards in the fields.</p>
+                            <p>I'm convey of the world's most prestigious web designed that focus on daily informed
+                                awards in the fields.</p>
                         </div>
                         <div class="achievement-year">
                             <span>2020 - 2023</span>
                         </div>
                     </div>
-                    
+
                     <div class="achievement-item">
                         <div class="achievement-icon blue">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14,2 14,8 20,8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                                <polyline points="10,9 9,9 8,9"/>
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14,2 14,8 20,8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                                <polyline points="10,9 9,9 8,9" />
                             </svg>
                         </div>
                         <div class="achievement-content">
                             <h4>SENIOR PRODUCT DESIGNER</h4>
-                            <p>I'm convey of the world's most prestigious web designed that focus on daily informed awards in the fields.</p>
+                            <p>I'm convey of the world's most prestigious web designed that focus on daily informed
+                                awards in the fields.</p>
                         </div>
                         <div class="achievement-year">
                             <span>2020 - 2023</span>
                         </div>
                     </div>
-                    
+
                     <div class="achievement-item">
                         <div class="achievement-icon red">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                                <polygon points="12,2 15.09,8.26 22,9 17,14 18.18,21 12,17.77 5.82,21 7,14 2,9 8.91,8.26"/>
+                                <polygon
+                                    points="12,2 15.09,8.26 22,9 17,14 18.18,21 12,17.77 5.82,21 7,14 2,9 8.91,8.26" />
                             </svg>
                         </div>
                         <div class="achievement-content">
                             <h4>SENIOR PRODUCT DESIGNER</h4>
-                            <p>I'm convey of the world's most prestigious web designed that focus on daily informed awards in the fields.</p>
+                            <p>I'm convey of the world's most prestigious web designed that focus on daily informed
+                                awards in the fields.</p>
                         </div>
                         <div class="achievement-year">
                             <span>2020 - 2023</span>
@@ -641,7 +664,7 @@
                         <h3>COLOR LOVE | SHADES OF BLUE AND PURPLE.</h3>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
                     <div class="card-image">
                         <img src="https://placehold.co/384x345" alt="Color Love Project">
@@ -655,7 +678,7 @@
                         <h3>COLOR LOVE | SHADES OF BLUE AND PURPLE.</h3>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
                     <div class="card-image">
                         <img src="https://placehold.co/384x345" alt="Color Love Project">
@@ -681,42 +704,46 @@
                 <div class="footer-section company-info">
                     <div class="footer-logo">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <circle cx="20" cy="20" r="18" stroke="white" stroke-width="4"/>
-                            <path d="M15 20L18 23L25 16" stroke="white" stroke-width="3" fill="none"/>
+                            <circle cx="20" cy="20" r="18" stroke="white" stroke-width="4" />
+                            <path d="M15 20L18 23L25 16" stroke="white" stroke-width="3" fill="none" />
                         </svg>
                         <span>Gerold</span>
                     </div>
                     <p class="company-description">
-                        I break down complex user UX experience 
-                        problems to create integrity focused 
+                        I break down complex user UX experience
+                        problems to create integrity focused
                         solutions that connects...
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
                             </svg>
                         </a>
                         <a href="#" class="social-link">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <circle cx="12" cy="12" r="3"/>
-                                <path d="M12 1a11 11 0 1011 11A11 11 0 0012 1zm5 8.5a6.5 6.5 0 11-6.5-6.5 6.5 6.5 0 016.5 6.5z"/>
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M12 1a11 11 0 1011 11A11 11 0 0012 1zm5 8.5a6.5 6.5 0 11-6.5-6.5 6.5 6.5 0 016.5 6.5z" />
                             </svg>
                         </a>
                         <a href="#" class="social-link">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                                <circle cx="4" cy="4" r="2"/>
+                                <path
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                <circle cx="4" cy="4" r="2" />
                             </svg>
                         </a>
                         <a href="#" class="social-link">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
                             </svg>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Legal Details -->
                 <div class="footer-section legal-details">
                     <h4>LEGAL DETAILS</h4>
@@ -727,7 +754,7 @@
                         <li><a href="#">Disclaimer</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Contact -->
                 <div class="footer-section contact-info">
                     <h4>CONTACT</h4>
@@ -741,22 +768,23 @@
                         <p>+44 123 456 8090</p>
                     </div>
                 </div>
-                
+
                 <!-- Newsletter -->
                 <div class="footer-section newsletter">
                     <h4>SUBSCRIBE TO MY NEWSLETTER!</h4>
                     <div class="newsletter-form">
                         <input type="email" placeholder="Enter your email" class="newsletter-input">
                         <button type="submit" class="newsletter-btn">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17l9.2-9.2M17 17V7H7" />
                             </svg>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Copyright Bar -->
         <div class="copyright-bar">
             <div class="container">
@@ -781,5 +809,7 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="./js/port.js"></script>
 </body>
+
 </html>
